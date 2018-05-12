@@ -3,6 +3,8 @@ language: bash
 bash:
   - "4.4"
 
+sudo: enabled
+
 script:
   - chmod 755 ubuntu-install.sh
   - ./ubuntu-install.sh
