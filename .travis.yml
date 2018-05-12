@@ -1,0 +1,15 @@
+language: bash
+
+bash:
+  - "4.4"
+
+script:
+  - chmod 755 ubuntu-install.sh
+  - ./ubuntu-install.sh
+
+after_success:
+  - crontab
+  - chmod 755 rsnapshot-check.sh
+
+notifications:
+  email: false
