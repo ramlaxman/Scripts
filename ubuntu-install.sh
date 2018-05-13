@@ -64,7 +64,7 @@ curl filezilla google-chrome-stable skype sni-qt sni-qt:i386 \
 libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin \
 openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras \
 p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev \
-libopenssl-ruby libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby1.9.1 || OwnError "Installation Failed :("
+libruby2.5 libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby1.9.1 || OwnError "Installation Failed :("
 
 #Install SASS
 clear
