@@ -5,9 +5,12 @@ bash:
 
 sudo: enabled
 
+#script:
+#  - chmod 755 ubuntu-install.sh
+#  - ./ubuntu-install.sh
+
 script:
-  - chmod 755 ubuntu-install.sh
-  - ./ubuntu-install.sh
+  - ./demo.sh
 
 after_success:
   - crontab
