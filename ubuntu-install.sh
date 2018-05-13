@@ -59,7 +59,12 @@ sudo apt update || OwnError "Updating Cache Failed :("
 #Install Common Softwares
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
-sudo apt -y install git-core openssh-server shutter pv vim vlc curl filezilla google-chrome-stable skype sni-qt sni-qt:i386 libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev libopenssl-ruby libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby1.9.1 || OwnError "Installation Failed :("
+sudo apt -y install git-core openssh-server shutter pv vim vlc \
+curl filezilla google-chrome-stable skype sni-qt sni-qt:i386 \
+libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin \
+openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras \
+p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev \
+libopenssl-ruby libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby1.9.1 || OwnError "Installation Failed :("
 
 #Install SASS
 clear
@@ -94,10 +99,11 @@ sudo npm install -g bower
 #Install Netbeans
 clear
 echo "Downloading Netbeans..."
-wget -c http://download.netbeans.org/netbeans/8.0/final/bundles/netbeans-8.0-php-linux.sh || OwnError "Unable to download Netbeans :("
-chmod u+x netbeans-8.0-php-linux.sh
+read -p "Enter latest version of Netbeans:"
+wget -c http://download.netbeans.org/netbeans/$late_ver/final/bundles/netbeans-$late_ver-php-linux-x64.sh || OwnError "Network connectivity problem :("
+chmod u+x netbeans-$late_ver-php-linux-x64.sh
 echo "Installing Netbeans..."
-sudo bash netbeans-8.0-php-linux.sh || OwnError "Unable to install Netbeans :("
+sudo bash netbeans-$late_ver-php-linux.sh || OwnError "Unable to install Netbeans :("
 clear
 
 
