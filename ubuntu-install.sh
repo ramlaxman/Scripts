@@ -32,13 +32,13 @@ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable
 #Opera Repository 
 clear
 echo "Install Repository For Opera..."
-sudo sh -c 'echo "deb http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list.d/opera.list' || OwnError "Unable To Fetch Opera Repository  :("
+sudo sh -c 'echo "deb [arch=amd64] http://deb.opera.com/opera/ stable non-free" >> /etc/apt/sources.list.d/opera.list' || OwnError "Unable To Fetch Opera Repository  :("
 sudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'
 
 #Skype Repository 
 clear
 echo "Install Repository For Skype..."
-sudo sh -c  'echo "deb http://archive.canonical.com/ubuntu/ $(lsb_release -sc) partner" >> /etc/apt/sources.list.d/canonical_partner.list' || OwnError "Unable To Add Skype Repository  :("
+sudo sh -c  'echo "deb [arch=amd64] http://archive.canonical.com/ubuntu/$(lsb_release -sc) partner" >> /etc/apt/sources.list.d/canonical_partner.list' || OwnError "Unable To Add Skype Repository  :("
 
 #NodeJs Repository
 clear
@@ -53,7 +53,7 @@ sudo add-apt-repository -y ppa:shutter/ppa || OwnError "Unable To Add Shutter Re
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update || OwnError "Updating Cache Failed :("
+sudo apt update && sudo apt list --upgradable || OwnError "Updating Cache Failed :("
 
 
 #Install Common Softwares
