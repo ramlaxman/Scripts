@@ -13,19 +13,21 @@ OwnError()
 # Unhide Startup
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
+
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bioic bever
+sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bionic bever
 
 # Install Apt-Add-Repository Python Tool
 sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :(" 
+
 
 #Google Repository 
 clear
 echo "Install Repository For Google..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - || OwnError "Unable To Fetch Google Repository  :("
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list' || OwnError "Unable To Add Google Repository  :("
+sudo sh -c 'echo "deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb stable main" > /etc/apt/sources.list.d/google-chrome.list' || OwnError "Unable To Add Google Repository  :("
 
 #Opera Repository 
 clear
@@ -101,7 +103,7 @@ read -p "Enter latest version of Netbeans:"
 wget -c http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-php-linux-x64.sh || OwnError "Network connectivity problem :("
 chmod u+x netbeans-8.2-php-linux-x64.sh
 echo "Installing Netbeans..."
-sudo bash netbeans-$late_ver-php-linux.sh || OwnError "Unable to install Netbeans :("
+sudo bash netbeans-8.2-php-linux.sh || OwnError "Unable to install Netbeans :("
 clear
 
 
