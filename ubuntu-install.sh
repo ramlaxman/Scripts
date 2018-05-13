@@ -17,7 +17,7 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update || OwnError "Updating Cache Failed :("
+sudo apt update || OwnError "Updating Cache Failed :("  #for bioic bever
 
 # Install Apt-Add-Repository Python Tool
 sudo apt install python-software-properties || OwnError "Unable To Install Python Software Properties :(" 
