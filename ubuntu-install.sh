@@ -27,7 +27,7 @@ sudo apt install software-properties-common || OwnError "Unable To Install Pytho
 clear
 echo "Install Repository For Google..."
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - || OwnError "Unable To Fetch Google Repository  :("
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list' || OwnError "Unable To Add Google Repository  :("
+sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list' || OwnError "Unable To Add Google Repository  :("
 
 #Opera Repository 
 clear
