@@ -9,6 +9,9 @@ script:
   - chmod 755 ubuntu-install.sh
   - ./ubuntu-install.sh
 
+#script:
+#  - bash demo.sh
+
 after_success:
   - crontab
   - chmod 755 rsnapshot-check.sh
