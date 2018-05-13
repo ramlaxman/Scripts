@@ -13,22 +13,13 @@ OwnError()
 # Unhide Startup
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 
-
 #Update The Cache
 clear
 echo "Updating Cache..."
-<<<<<<< HEAD
 sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bioic bever
 
 # Install Apt-Add-Repository Python Tool
 sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :(" 
-=======
-sudo apt update || OwnError "Updating Cache Failed :("
-
-# Install Apt-Add-Repository Python Tool
-sudo apt install software-common-properties || OwnError "Unable To Install Python Software Properties :("   #for new version
->>>>>>> 642a7d4a46676bb20226d460bc88b2629467d1e2
-
 
 #Google Repository 
 clear
