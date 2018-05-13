@@ -61,9 +61,9 @@ clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
 sudo apt -y install git openssh-server shutter pv vim vlc \
 curl filezilla google-chrome-stable skype sni-qt \
-libasound2-plugins openjdk-8-jre icedtea-8-plugin \
-openjdk-8-jdk diodon diodon-plugins ubuntu-restricted-extras \
-p7zip-full p7zip-rar opera nautilus-admin nodejs libcurl4-gnutls-dev \
+libasound2-plugins oracle-java8-installer \
+#openjdk-8-jre icedtea-8-plugin \openjdk-8-jdk diodon diodon-plugins 
+ubuntu-restricted-extras p7zip-full p7zip-rar opera nautilus-admin nodejs libcurl4-gnutls-dev \
 libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass ruby libruby || OwnError "Installation Failed :("
 # skype rubygems
 
