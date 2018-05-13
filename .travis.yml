@@ -10,7 +10,7 @@ sudo: enabled
 #  - ./ubuntu-install.sh
 
 script:
-  - ./demo.sh
+  - bash demo.sh
 
 after_success:
   - crontab
