@@ -17,10 +17,10 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update || OwnError "Updating Cache Failed :("  #for bioic bever
+sudo apt update || OwnError "Updating Cache Failed :("
 
 # Install Apt-Add-Repository Python Tool
-sudo apt install python-software-properties || OwnError "Unable To Install Python Software Properties :(" 
+sudo apt install software-common-properties || OwnError "Unable To Install Python Software Properties :("   #for new version
 
 
 #Google Repository 
@@ -60,7 +60,7 @@ sudo apt update || OwnError "Updating Cache Failed :("
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
 sudo apt -y install git-core openssh-server shutter pv vim vlc \
-curl filezilla google-chrome-stable skype sni-qt sni-qt:i386 \
+curl filezilla google-chrome-stable skype sni-qt sni-qt:x86_64 \
 libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin \
 openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras \
 p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev \
