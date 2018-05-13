@@ -17,10 +17,10 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update || OwnError "Updating Cache Failed :("  #for bioic bever
+sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bioic bever
 
 # Install Apt-Add-Repository Python Tool
-sudo apt install python-software-properties || OwnError "Unable To Install Python Software Properties :(" 
+sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :(" 
 
 
 #Google Repository 
@@ -60,11 +60,11 @@ sudo apt update || OwnError "Updating Cache Failed :("
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
 sudo apt -y install git-core openssh-server shutter pv vim vlc \
-curl filezilla google-chrome-stable skype sni-qt sni-qt:i386 \
-libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin \
-openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras \
+curl filezilla google-chrome-stable skype sni-qt sni-qt \
+libasound2-plugins openjdk-8-jre icedtea-8-plugin \
+openjdk-8-jdk diodon diodon-plugins ubuntu-restricted-extras \
 p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev \
-libruby2.5 libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby1.9.1 || OwnError "Installation Failed :("
+libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby libruby || OwnError "Installation Failed :("
 
 #Install SASS
 clear
