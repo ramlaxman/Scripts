@@ -58,15 +58,9 @@ sudo apt update || OwnError "Updating Cache Failed :("
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
 sudo apt -y install git-core openssh-server shutter pv vim vlc \
-<<<<<<< HEAD
 curl filezilla google-chrome-stable skype sni-qt sni-qt \
 libasound2-plugins openjdk-8-jre icedtea-8-plugin \
 openjdk-8-jdk diodon diodon-plugins ubuntu-restricted-extras \
-=======
-curl filezilla google-chrome-stable skype sni-qt sni-qt:x86_64 \
-libasound2-plugins:i386 openjdk-7-jre icedtea-7-plugin \
-openjdk-7-jdk diodon diodon-plugins ubuntu-restricted-extras \
->>>>>>> 642a7d4a46676bb20226d460bc88b2629467d1e2
 p7zip-full p7zip-rar opera nautilus-open-terminal nodejs libcurl4-gnutls-dev \
 libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass rubygems ruby libruby || OwnError "Installation Failed :("
 
@@ -104,8 +98,8 @@ sudo npm install -g bower
 clear
 echo "Downloading Netbeans..."
 read -p "Enter latest version of Netbeans:"
-wget -c http://download.netbeans.org/netbeans/$late_ver/final/bundles/netbeans-$late_ver-php-linux-x64.sh || OwnError "Network connectivity problem :("
-chmod u+x netbeans-$late_ver-php-linux-x64.sh
+wget -c http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-php-linux-x64.sh || OwnError "Network connectivity problem :("
+chmod u+x netbeans-8.2-php-linux-x64.sh
 echo "Installing Netbeans..."
 sudo bash netbeans-$late_ver-php-linux.sh || OwnError "Unable to install Netbeans :("
 clear
