@@ -22,6 +22,9 @@ sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed
 # Install Apt-Add-Repository Python Tool
 sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :(" 
 
+#Swachchha PPA Abhiyan
+cd /etc/apt/sources.list.d/
+rm -f * 
 
 #Google Repository 
 clear
