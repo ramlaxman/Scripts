@@ -1,6 +1,6 @@
 include:
   - os: linux
-    dist: xenial
+    dist: trusty
 
 sudo: required
 
