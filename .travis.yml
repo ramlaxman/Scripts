@@ -1,18 +1,16 @@
+include:
+  - os: linux
+    dist: xenial
+    sudo: required
+
 language: bash
-os: ubuntu
-dist: xenial
 
 bash:
   - "4.4"
 
-sudo: enabled
-
 script:
   - chmod 755 ubuntu-install.sh
   - ./ubuntu-install.sh
-
-#script:
-#  - bash demo.sh
 
 after_success:
   - crontab
