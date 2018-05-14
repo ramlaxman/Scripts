@@ -1,6 +1,6 @@
 language: bash
 os: ubuntu
-dist: bionic
+dist: xenial
 
 bash:
   - "4.4"
