@@ -1,7 +1,8 @@
 include:
   - os: linux
     dist: xenial
-    sudo: required
+
+sudo: required
 
 language: bash
 
