@@ -14,10 +14,10 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt-get update && sudo	apt-get list --upgradable || OwnError "Updating Cache Failed :("  #for bionic bever
+sudo apt update && sudo	apt upgrade || OwnError "Updating Cache Failed :("  #for bionic bever
 
 # Install apt-get-Add-Repository Python Tool
-sudo apt-get install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
+sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
 
 #Swachchha PPA Abhiyan
 #echo ""> /etc/apt/sources.list.d/
@@ -58,13 +58,13 @@ clear
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt-get update && sudo apt-get list --upgradable || OwnError "Updating Cache Failed :("
+sudo apt update && sudo apt upgrade || OwnError "Updating Cache Failed :("
 
 
 #Install Common Softwares
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
-sudo apt-get -y install git openssh-server pv vim vlc \
+sudo apt -y install git openssh-server pv vim vlc \
 curl filezilla google-chrome-stable skype sni-qt \
 libasound2-plugins openjdk-8-jre icedtea-8-plugin openjdk-8-jdk \
 p7zip-full p7zip-rar opera nautilus-admin nodejs libcurl4-gnutls-dev \
