@@ -1,14 +1,11 @@
 #!/bin/bash
 
-
 #Error Handling
-OwnError()
-{
+OwnError(){
     # Redirect All STDIN 2 STDOUT
     echo "$@" >&2
     exit 1
 }
-
 
 # Unhide Startup
 sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
@@ -17,10 +14,10 @@ sudo sed -i "s/NoDisplay=true/NoDisplay=false/g" /etc/xdg/autostart/*.desktop
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bioic bever
+sudo apt-get update && sudo	apt-get list --upgradable || OwnError "Updating Cache Failed :("  #for bionic bever
 
-# Install Apt-Add-Repository Python Tool
-sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
+# Install apt-get-Add-Repository Python Tool
+sudo apt-get install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
 
 #Swachchha PPA Abhiyan
 #echo ""> /etc/apt/sources.list.d/
@@ -45,8 +42,8 @@ sudo sh -c 'wget -O - http://deb.opera.com/archive.key | apt-key add -'
 
 #Skype Repository 
 clear
-echo "Install Repository For Skype..."
-sudo sh -c  'echo "deb [arch=amd64] http://archive.canonical.com/ubuntu/ $(lsb_release -sc) partner" >> /etc/apt/sources.list.d/canonical_partner.list' || OwnError "Unable To Add Skype Repository  :("
+#echo "Install Repository For Skype..."
+#sudo sh -c  'echo "deb [arch=amd64] http://archive.canonical.com/ubuntu/ $(lsb_release -sc) partner" >> /etc/apt/sources.list.d/canonical_partner.list' || OwnError "Unable To Add Skype Repository  :("
 
 #NodeJs Repository
 #clear
@@ -61,18 +58,18 @@ sudo sh -c  'echo "deb [arch=amd64] http://archive.canonical.com/ubuntu/ $(lsb_r
 #Update The Cache
 clear
 echo "Updating Cache..."
-sudo apt update && sudo apt list --upgradable || OwnError "Updating Cache Failed :("
+sudo apt-get update && sudo apt-get list --upgradable || OwnError "Updating Cache Failed :("
 
 
 #Install Common Softwares
 clear
 echo "Installing Git Vim Filezilla Google-Chrome Skype Oracle-Jdk Opera"
-sudo apt -y install git openssh-server shutter pv vim vlc \
+sudo apt-get -y install git openssh-server pv vim vlc \
 curl filezilla google-chrome-stable skype sni-qt \
 libasound2-plugins openjdk-8-jre icedtea-8-plugin openjdk-8-jdk \
 p7zip-full p7zip-rar opera nautilus-admin nodejs libcurl4-gnutls-dev \
 libxml2 libxml2-dev libxslt1-dev ruby-dev ruby-sass ruby libruby || OwnError "Installation Failed :("
-# skype rubygems openjdk-8-jre icedtea-8-plugin openjdk-8-jdk diodon diodon-plugins ubuntu-restricted-extras
+# shutter skype rubygems openjdk-8-jre icedtea-8-plugin openjdk-8-jdk diodon diodon-plugins ubuntu-restricted-extras
 
 #Install SASS
 clear
