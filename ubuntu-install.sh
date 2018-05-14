@@ -20,8 +20,11 @@ echo "Updating Cache..."
 sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed :("  #for bioic bever
 
 # Install Apt-Add-Repository Python Tool
-sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :(" 
+sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
 
+#Swachchha PPA Abhiyan
+echo ""> /etc/apt/sources.list.d/
+rm -f *
 
 #Google Repository 
 clear
@@ -48,7 +51,7 @@ echo "Install Repository For NodeJs..."
 #Shutter Repository
 clear
 echo "Install Repository For Shutter..."
-# sudo add-apt-repository -y ppa:shutter/ppa || OwnError "Unable To Add Shutter Repository  :("
+sudo add-apt-repository -y ppa:shutter/ppa || OwnError "Unable To Add Shutter Repository  :("
 
 #Update The Cache
 clear
@@ -99,9 +102,8 @@ sudo npm install -g bower
 #Install Netbeans
 clear
 echo "Downloading Netbeans..."
-read -p "Enter latest version of Netbeans:"
-wget -c http://download.netbeans.org/netbeans/$late_ver/final/bundles/netbeans-$late_ver-php-linux-x64.sh || OwnError "Network connectivity problem :("
-chmod u+x netbeans-$late_ver-php-linux-x64.sh
+wget -c http://download.netbeans.org/netbeans/8.2/final/bundles/netbeans-8.2-php-linux-x64.sh || OwnError "Network connectivity problem :("
+chmod u+x netbeans-8.2-php-linux-x64.sh
 echo "Installing Netbeans..."
 sudo bash netbeans-$late_ver-php-linux.sh || OwnError "Unable to install Netbeans :("
 clear
