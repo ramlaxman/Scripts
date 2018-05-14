@@ -23,8 +23,13 @@ sudo apt update && sudo	apt list --upgradable || OwnError "Updating Cache Failed
 sudo apt install software-properties-common || OwnError "Unable To Install Python Software Properties :("   #for bionic
 
 #Swachchha PPA Abhiyan
-echo ""> /etc/apt/sources.list.d/
-rm -f *
+#echo ""> /etc/apt/sources.list.d/
+#mkdir /opt/ppa-list/
+#rm -rf /opt/ppa-list/*
+#cp -a /etc/apt/sources.list.d/ /opt/ppa-list/
+#rm -f *
+
+#rm -f *
 
 #Google Repository 
 clear
